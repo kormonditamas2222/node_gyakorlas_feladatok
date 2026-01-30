@@ -1,0 +1,19 @@
+import readline from 'readline';
+import lodash from 'lodash';
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+})
+
+rl.question("Írj be egy egész számot: ", szam => {
+    rl.question("Írj be egy tetszőleges szöveget: ", szoveg => {
+        let kimenet = "megoldás: ";
+        szoveg = lodash.toUpper(szoveg);
+        for (let i = 0; i < szam; i++) {
+            kimenet += szoveg + " ";
+        }
+        console.log(kimenet);
+        rl.close();
+    })
+})
