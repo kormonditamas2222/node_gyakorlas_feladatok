@@ -1,5 +1,4 @@
 import readline from 'readline';
-import lodash from 'lodash';
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -9,7 +8,7 @@ const rl = readline.createInterface({
 rl.question("Írj be egy egész számot: ", szam => {
     rl.question("Írj be egy tetszőleges szöveget: ", szoveg => {
         let kimenet = "megoldás: ";
-        szoveg = lodash.toUpper(szoveg);
+        szoveg = szoveg.toUpperCase();
         for (let i = 0; i < szam; i++) {
             kimenet += szoveg + " ";
         }
